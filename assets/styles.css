@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap');
 
 * {
     padding: 0;
@@ -7,10 +7,10 @@
 }
 
 :root {
-    --font: 'Fira Sans', sans-serif;
+    --font: 'Mukta', sans-serif;
     --color-primary: #60ffcb;
-    --color-secundary: #144443;
-    --color-third: 
+    --color-secundary: #111111;
+    --color-third: #018985;
 }
 
 body {
@@ -21,15 +21,23 @@ body {
     width: 100%;
     height: 100vh;
 }
-
+/* Nav */
 nav {
+    background-color: #111111;
     width: 100%;
-    position: fixed;
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 0.4em;
-    color: #Fff
+    color: #Fff;
+    transition: 300ms ease;
+}
+
+nav.no_visible {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    animation: animation_nav 1s normal;
 }
 
 nav .sections_menu {
@@ -39,7 +47,10 @@ nav .sections_menu {
 
 nav .sections_menu a{
     text-decoration: none;
-    color:#000
+    color:#fff;
+    font-size: 1.3em;
+    padding: 0.3em 0.5em;
+    border-bottom: 2px solid #c6fcc7;
 }
 
 nav .logo {
@@ -47,56 +58,509 @@ nav .logo {
     align-items: center;
     gap: 1em; 
     width: 10%;
-    color: #000
+    color: #fff
 }
 
 nav .logo img{
     width: 30%;
     margin-top: 0.5em;
+    filter: invert();
 }   
+
+nav .menu {
+    margin-top: 0.5em;
+}
 
 img#menu_decoration {
     width: 50px;
     height: 30px;
 }
 
-/*main*/
-main{
+/*header*/
+header{
     display: grid;
     grid-template-columns: repeat(2, 50%);
+    height: 100vh;
+}
+
+header .product h3 {
+    font-size: 3.7rem;
+    color: var(--color-primary)
+}
+
+
+header .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background: var(--color-secundary);
+    color: #fff;
+}
+
+header .product .content_product{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 10em !important;
+}   
+
+header .product .content_product div{
+    display: flex;
+    gap: 1em
+}
+
+header .product .content_product button{
+    width: 30%;
+    padding: 1em;
+    outline: none;
+    border: 0.2em solid var(--color-primary);
+    background: transparent;
+    color: #fff;
+    transition: 300ms linear; 
+    cursor: pointer;
+}
+
+header .product .content_product button:nth-child(1) {
+    border: none; 
+    color: #000;
+    background: rgb(23,57,29);
+    background-image: radial-gradient(circle at -17.16% 55.88%, #c6fcc7 0, #b8f8c7 12.5%, #a5f1c4 25%, #8ce6bd 37.5%, #6cd8b4 50%, #44caac 62.5%, #00bfa9 75%, #00b7aa 87.5%, #00b3ae 100%);
+}
+
+header .product .content_product button:hover {
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+header .product .content_product span {
+    width: 70%;
+}
+
+header .product_photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main and Section Problem */
+
+main,
+section.solution_problem  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 100%;
+    background: #dfdfdf;
+}
+section.solution_problem  {
+    background: #fff
+}
+
+main .main_information h2,
+main .main_information p,
+section .section_information h2,
+section .section_information p,
+section .solution_information h2,
+section .solution_information p{
+    margin: auto;
+    width: 70%;
+    text-align: center;
+}
+
+main .main_information h2,
+section .section_information h2,
+section .solution_information h2{
+    font-size: 3em;
+    color: var(--color-third);
+}
+
+main .main_information p,
+section .section_information p,
+section .solution_information p {
+    font-size: 1.2em;
+    color: #222222
+}
+
+main .main_important,
+section.solution_problem .solution_important {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    margin-top: 3em;
+
+}
+
+main  .main_important img,
+section.solution_problem .solution_important img {
+    width: 26%;
+}
+
+main .main_important_cards,
+section .solution_important_cards{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+main .main_important_cards .card,
+section .solution_important_cards .card{
+    padding: 1.5em;
+    border-radius: 1em;
+    background: #efefef;
+}
+
+main .main_important_cards .card h3,
+section .solution_important_cards .card h3{
+    color: var(--color-third);
+}
+
+main .main_important_cards .card p,
+section .solution_important_cards .card p{
+    width: 90%;
+}
+
+main .main_important_cards .card button,
+section .solution_important_cards .card button{
+    padding: 0.5em;
+    outline: none;
+    border: 1.7px solid var(--color-third);
+    margin-top: 1em;       
+    cursor: pointer;
+    transition: 500ms ease;
+}
+
+main .main_important_cards .card button:hover,
+section .solution_important_cards .card button:hover{
+    background: #018985;
+    color: #fff
+}
+
+main .main_important_cards .main_important_cards-button,
+section .solution_important_cards .solution_important_cards-button{
+    padding: 0.8em;
+    width: 50%;
+    outline: none;
+    border: none;
+    border-radius: 0.4em;
+    background: #222222;
+    color: #fff;
+    cursor: pointer;
+    transition: 500ms ease;
+}
+
+section .solution_important_cards .solution_important_cards-button{
+    align-self: center;
+}
+
+main .main_important_cards .main_important_cards-button:hover,
+section .solution_important_cards .solution_important_cards-button:hover{
+    background: #111111;
+}
+
+/* Section orders*/
+
+section.section_orders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5em;
+    height: 100vh;
+    align-items: center;
+    background: #afafafaf;
+}
+
+section.section_orders .section_orders_cards{
+    display: flex;
+    gap: 5em
+}
+
+section.section_orders .section_orders_cards .card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    max-width: 400px;
+    height: 500px;
+    background: #efefefef;
+}
+
+section.section_orders .section_orders_cards .card h3{
+    font-size: 2em;
+    border-bottom: 1px solid var(--color-third);
+}
+
+section.section_orders .section_orders_cards .card h3.started {
+    border-bottom: 2px solid #00b3ae;
+}
+
+section.section_orders .section_orders_cards .card div{
+    display: flex;
+    width: 100%;
+    gap: 1em
+}
+
+section.section_orders .section_orders_cards .card div img{
+    width: 5%;
+}
+
+section.section_orders .section_orders_cards .card p.price{
+    color: #333333
+}
+section.section_orders .section_orders_cards .card p span{
+    font-size: 2em;
+    color: #111111
+}
+
+section.section_orders .section_orders_cards .card button{
+    padding: .8em;
+    width: 70%;
+    outline: none;
+    background: #111111;
+    color: #fff;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: 400ms all ease;
+    border: none;
+}
+
+section.section_orders .section_orders_cards .card button.btn-started{
+    background: rgb(23,57,29);
+    background-image: radial-gradient(circle at -17.16% 55.88%, #c6fcc7 0, #b8f8c7 12.5%, #a5f1c4 25%, #8fcdd3f2 37.5%, #6cd8b4 50%, #44caac 62.5%, #00bfa9 75%, #00b7aa 87.5%, #00b3ae 100%);
+    color: #000;
+    border: 1px solid var(--color-third);
+}
+
+section.section_orders .section_orders_cards .card button:hover{
+    opacity: 0.8;
+}
+
+
+/*section team*/
+
+section.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
     height: 80vh;
 }
 
-main .product h3 {
-    font-size: 3.7rem;
-}
-
-
-main .product {
+section.team .team_information {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: center;
-    gap: 1em;
-    background: rgb(248, 65, 65);
-    color: white
+    align-items: center;
 }
 
-main .product .content_product{
+section.team .team_information h3{
+    font-size: 2em;
+    color: var(--color-third)
+}
+
+section.team .integrants{
+    display: flex;
+    gap: 3em; 
+}
+
+section.team .integrants .integrant {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em
+}
+
+section.team .integrants .integrant div{
+    text-align: center;
+}
+
+section.team .integrants .integrant div h4{
+    font-size: 1.4em;
+}
+
+section.team .integrants .integrant div p{
+    font-size: 1.2em;
+}
+
+section.team .integrants .integrant img {
+    width: 80%;
+}
+
+/* section attestations */
+
+section.attestations {
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3em;
+    height: 60vh;
+}
+
+section.attestations .testimonials_information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3em;
+}
+
+section.attestations .testimonials_information h3 {
+    font-size: 2em;
+    color: var(--color-third)
+}
+
+section.attestations .testimonials_information p {
+    width: 65%;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+section.attestations .testimonials{
+    display: flex;
+    width: 60%;
+    gap: 2em;
+}
+
+section.attestations .testimonials .testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background: #fff;
+    padding: 2em 3.5em;
+}
+
+section.attestations .testimonials .testimonial .testimonial_header{
+    display: flex;
+    align-items: center;
+    gap: 1.1em;
+}  
+
+section.attestations .testimonials .testimonial .testimonial_header img {
+    width: 25%;
+}
+
+section.attestations .testimonials .testimonial .description {
+    font-size: 0.9em;
+    width: 100%;
+    font-style: italic;
+    color: #555555
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4em;
+    height: 30vh;
+}
+
+footer .footer_information_logo {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 10%;
+}
+
+footer .footer_information_logo .logo {
+    display: flex;
+    align-items: center;
     gap: 1em;
-    margin-right: 1em;
+}
+
+footer .footer_information_logo .logo img {
+    width: 25%;
 }   
 
-main .product .content_product button{
-    width: 30%;
-    padding: 1em;
+footer .footer_information_logo .social {
+    display: flex;
+    gap: 1em;
 }
 
-main .product .content_product span {
-    width: 70%;
+footer .footer_information_logo .social img{
+    width: 10%;
 }
-main .product_photo img{
-    height: 100%;
+
+footer .paragraphs {
+    display: flex;
+    gap: 6em
+}
+
+footer .paragraphs .paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    user-select: none;
+}
+
+footer .paragraphs .paragraph h3{
+    color: var(--color-third)
+}
+
+
+footer .paragraphs .paragraph a{
+    text-decoration: none;
+    color: #444;
+    transition: ease 300ms;
+    padding-bottom: 0.3em;
+}
+
+footer .paragraphs .paragraph a:hover{
+    color: #222;
+}
+footer .MoreInformation div {
+    display: flex;
+    gap: 1em;
+    margin-top: 1.4rem;
+}
+footer .MoreInformation div button{
+    transition: 300ms ease;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.4);
+}
+
+footer .MoreInformation div button:nth-child(1){
+    background: rgb(23,57,29);
+    font-size: 1.1em;
+    background-image: radial-gradient(circle at -17.16% 55.88%, #c6fcc7 0, #b8f8c7 12.5%, #a5f1c4 25%, #8fcdd3f2 37.5%, #6cd8b4 50%, #44caac 62.5%, #00bfa9 75%, #00b7aa 87.5%, #00b3ae 100%);
+    color: #000;
+}
+
+footer .MoreInformation div button:nth-child(2){
+    background: #111;
+    color: #fff;
+}
+
+footer .MoreInformation div button:hover{
+    opacity: 0.8;
+}
+
+/* Developer */
+section.developer{
+    text-align: center;
+    padding: 1em;
+    background: #dfdfdf;
+    font-size: 0.8em;
+    color: #444
+}
+
+/* Animtions */
+@keyframes animation_nav {
+    0%{
+        transform: translateY(-100px)
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
