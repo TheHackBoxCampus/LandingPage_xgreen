@@ -13,6 +13,11 @@
     --color-third: #018985;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     font-family: var(--font);
 }
@@ -32,6 +37,8 @@ nav {
     padding: 0.4em;
     color: #Fff;
     transition: 300ms ease;
+    max-height: 80px;
+
 }
 
 nav.no_visible {
@@ -53,18 +60,9 @@ nav .sections_menu a{
     border-bottom: 2px solid #c6fcc7;
 }
 
-nav .logo {
-    display: flex;
-    align-items: center;
-    gap: 1em; 
-    width: 10%;
-    color: #fff
-}
-
-nav .logo img{
-    width: 30%;
-    margin-top: 0.5em;
-    filter: invert();
+nav img{
+    width: 150px;
+    overflow: hidden;
 }   
 
 nav .menu {
@@ -84,7 +82,8 @@ header{
 }
 
 header .product h3 {
-    font-size: 3.7rem;
+    width: 90%;
+    font-size: 3.2em;
     color: var(--color-primary)
 }
 
@@ -92,7 +91,7 @@ header .product h3 {
 header .product {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     gap: 1em;
     background: var(--color-secundary);
@@ -100,8 +99,10 @@ header .product {
 }
 
 header .product .content_product{
+    width: 80%;
     display: flex;
     flex-direction: column;
+    
     gap: 1em;
     margin-bottom: 10em !important;
 }   
@@ -111,25 +112,27 @@ header .product .content_product div{
     gap: 1em
 }
 
-header .product .content_product button{
+header .product .content_product a{
     width: 30%;
-    padding: 1em;
+    color: #333;
+    text-decoration: none;
+    padding: 0.4em;
     outline: none;
-    border: 0.2em solid var(--color-primary);
-    background: transparent;
-    color: #fff;
     transition: 300ms linear; 
+    text-align: center;
     cursor: pointer;
-}
-
-header .product .content_product button:nth-child(1) {
-    border: none; 
-    color: #000;
     background: rgb(23,57,29);
     background-image: radial-gradient(circle at -17.16% 55.88%, #c6fcc7 0, #b8f8c7 12.5%, #a5f1c4 25%, #8ce6bd 37.5%, #6cd8b4 50%, #44caac 62.5%, #00bfa9 75%, #00b7aa 87.5%, #00b3ae 100%);
 }
 
-header .product .content_product button:hover {
+header .product .content_product a:nth-child(2){
+    background: transparent;
+    border: 1px solid var(--color-third);
+    color: #fff
+}
+
+
+header .product .content_product a:hover {
     opacity: 0.8;
     font-weight: bold;
 }
@@ -143,9 +146,59 @@ header .product_photo img{
     height: 100%;
     object-fit: cover;
 }
+/* Section action */
+section.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    width: 60%;
+    margin: auto;
+    gap: 2rem;
+}
+
+section.action .action_information{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    max-width: 50%;
+}
+
+section.action .action_information h3 {
+    font-size: 2em;
+    width: 72%;
+}
+
+section.action .action_information p {
+    width: 80%;
+}
+
+section.action .action_information button{
+    width: 30%;
+    background: rgb(23,57,29);
+    background-image: radial-gradient(circle at -17.16% 55.88%, #c6fcc7 0, #b8f8c7 12.5%, #a5f1c4 25%, #8ce6bd 37.5%, #6cd8b4 50%, #44caac 62.5%, #00bfa9 75%, #00b7aa 87.5%, #00b3ae 100%);
+    padding: 1em;
+    border: 1px solid black;
+    outline: none;
+    transition: 300ms ease;
+    cursor: pointer;
+}
+
+section.action .action_information button:hover{
+    opacity: .8;
+}
+section.action .action_image {
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    background: #ccc;
+    border-radius: 1em;
+}
+
+
 
 /* Main and Section Problem */
-
 main,
 section.solution_problem  {
     display: flex;
@@ -260,6 +313,39 @@ section .solution_important_cards .solution_important_cards-button{
 main .main_important_cards .main_important_cards-button:hover,
 section .solution_important_cards .solution_important_cards-button:hover{
     background: #111111;
+}
+
+/* Banner */
+section.solution_banner {
+    height: 450px;
+    background-image: url(img/Solution_Background.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff
+}
+
+section.solution_banner h3 {
+    font-size: 3em;
+}
+
+section.solution_banner button {
+    padding: .8rem;
+    background: #222;
+    color: #fff;
+    outline: none; 
+    border: 1px solid #fff;
+    transition: 300ms ease;
+    cursor: pointer; 
+}
+
+section.solution_banner button:hover {
+    opacity: .8;
 }
 
 /* Section orders*/
