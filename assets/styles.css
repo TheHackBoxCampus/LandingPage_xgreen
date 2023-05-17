@@ -38,12 +38,11 @@ nav {
     color: #Fff;
     transition: 300ms ease;
     max-height: 80px;
-
 }
 
 nav.no_visible {
     position: fixed;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.7);
     animation: animation_nav 1s normal;
 }
 
@@ -58,6 +57,11 @@ nav .sections_menu a{
     font-size: 1.3em;
     padding: 0.3em 0.5em;
     border-bottom: 2px solid #c6fcc7;
+    transition: 300ms ease;
+}
+
+nav .sections_menu a:hover{
+    background: rgba(0, 0, 0, .9)
 }
 
 nav img{
@@ -228,6 +232,10 @@ section .solution_information p{
     text-align: center;
 }
 
+section .section_information h2{
+    width: 100%;
+}
+
 main .main_information p{
     width: 65%;
 }
@@ -254,6 +262,7 @@ section.solution_problem .solution_important {
     margin-top: 3em;
 
 }
+
 main .main_important .main_imagen {
     width: 60%;
     height: 100%;
@@ -266,12 +275,17 @@ main  .main_important .main_imagen img {
     object-fit: cover;
 }
 
-section.solution_problem .solution_important img {
-    width: 60%;
+
+section .solution_important .solution_image_card {
+    width: 50%;
+}
+
+section .solution_important .solution_image_card img{
+    width: 120%;
 }
 
 main .main_important_cards,
-section.solution_problem .solution_important{
+section.solution_problem .solution_important {
     width: 65%;
 }
 
@@ -316,6 +330,10 @@ section .solution_important_cards .card button{
     margin-top: 1em;       
     cursor: pointer;
     transition: 500ms ease;
+}
+
+section .solution_important_cards  {
+    width: 40%;
 }
 
 main .main_important_cards .card button:hover,
@@ -402,50 +420,9 @@ section.solution_banner .porcentage p {
     width: 59%;
 }
 /* Banner porcentaje */
-
-.bg{
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    background: var(--color-primary);
-    position: relative;
-    margin: 20px auto;
+section.solution_banner .porcentage img{
+    width: 30%;
 }
-.circle-right, .circle-left, .mask-right, .mask-left{
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.circle-right, .circle-left{
-    background: #111
-}
-.mask-right, .mask-left{
-    background: #ccc;
-}
-.circle-right, .mask-right{
-    clip: rect(0,200px, 100px, 120px);
-    transform: rotate(-80deg);
-}
-.circle-left, .mask-left{
-    clip: rect(100px,200px,200px,0);
-}
-.text{
-    width: 160px;
-    height: 160px;
-    line-height: 160px;
-    text-align: center;
-    font-size: 34px;
-    color: #fff;
-    border-radius: 100%;
-    background: #222;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
 /* Section orders*/
 
 section.section_orders {
@@ -453,23 +430,23 @@ section.section_orders {
     flex-direction: column;
     justify-content: center;
     gap: 5em;
-    height: 100vh;
+    height: 80vh;
     align-items: center;
     background: #afafafaf;
 }
 
 section.section_orders .section_orders_cards{
     display: flex;
-    gap: 5em
+    gap: 5em;
 }
 
 section.section_orders .section_orders_cards .card {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    padding: 1em;
+    padding: 1.5em;
     max-width: 400px;
-    height: 500px;
+    max-height: 450px;
     background: #efefefef;
 }
 
@@ -485,7 +462,10 @@ section.section_orders .section_orders_cards .card h3.started {
 section.section_orders .section_orders_cards .card div{
     display: flex;
     width: 100%;
-    gap: 1em
+    gap: 1em;
+}
+section.section_orders .section_orders_cards .card div p {
+    width: 78%;
 }
 
 section.section_orders .section_orders_cards .card div img{
@@ -532,7 +512,7 @@ section.team {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    height: 80vh;
+    height: 85vh;
 }
 
 section.team .team_information {
@@ -545,6 +525,10 @@ section.team .team_information {
 section.team .team_information h3{
     font-size: 2em;
     color: var(--color-third)
+}
+
+section.team .team_information p{
+    font-size: 1.1em;
 }
 
 section.team .integrants{
@@ -568,116 +552,151 @@ section.team .integrants .integrant div h4{
     font-size: 1.4em;
 }
 
+
 section.team .integrants .integrant div p{
     font-size: 1.2em;
+    color: var(--color-third)
+}
+
+section.team .integrants .integrant div p:nth-child(3){
+    color: #000;
+    font-size: 1em;
 }
 
 section.team .integrants .integrant img {
-    width: 53%;
+    width: 50%;
     border-radius: 0.4em;
 }
 
+/* Action_2 */
+section.action_2 {
+    height: 40vh;
+    background-image: url(img/Banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
 
-
-/* Footer */
-footer {
+section.action_2 .banner2_information {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 4em;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+section.action_2 .banner2_information h3{
+    font-size: 2em;
+    width: 50%;
+    color: #fff
+}   
+
+section.action_2 .banner2_information button{
+    padding: 1em 5rem;
+    font-size: 1em;
+    border: 2px solid var(--color-primary);
+    outline: none;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff; 
+    transition: 300ms ease;
+    cursor: pointer;
+}
+
+section.action_2 .banner2_information button:hover{
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+
+footer {
+    background: rgba(0, 0, 0, .8);
     height: 30vh;
+}
+
+footer .cap{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    height: 100%;
 }
 
 footer .footer_information_logo {
     display: flex;
     flex-direction: column;
-    gap: 2em;
-    width: 10%;
+    width: 50%;
+    border-right: 1px solid #fff;
 }
 
 footer .footer_information_logo .logo {
     display: flex;
     align-items: center;
-    gap: 1em;
+    justify-content: center;
+    max-height: 120px;
 }
 
 footer .footer_information_logo .logo img {
-    width: 25%;
+    width: 30%;
 }   
 
 footer .footer_information_logo .social {
     display: flex;
+    justify-content: center;
     gap: 1em;
 }
 
 footer .footer_information_logo .social img{
-    width: 10%;
+    width: 4%;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+footer .footer_information_logo .social img:hover{
+    transform: scale(1.1);
 }
 
 footer .paragraphs {
     display: flex;
+    justify-content: center;
+    width: 50%;
     gap: 6em
 }
 
 footer .paragraphs .paragraph {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 0.5em;
     user-select: none;
 }
 
 footer .paragraphs .paragraph h3{
-    color: var(--color-third)
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1.3em;
 }
 
 
 footer .paragraphs .paragraph a{
     text-decoration: none;
-    color: #444;
+    color: #dfdfdf;
     transition: ease 300ms;
     padding-bottom: 0.3em;
 }
 
 footer .paragraphs .paragraph a:hover{
-    color: #222;
-}
-footer .MoreInformation div {
-    display: flex;
-    gap: 1em;
-    margin-top: 1.4rem;
-}
-footer .MoreInformation div button{
-    transition: 300ms ease;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5em;
-    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.4);
-}
-
-footer .MoreInformation div button:nth-child(1){
-    background: rgb(23,57,29);
-    font-size: 1.1em;
-    background-image: radial-gradient(circle at -17.16% 55.88%, #c6fcc7 0, #b8f8c7 12.5%, #a5f1c4 25%, #8fcdd3f2 37.5%, #6cd8b4 50%, #44caac 62.5%, #00bfa9 75%, #00b7aa 87.5%, #00b3ae 100%);
-    color: #000;
-}
-
-footer .MoreInformation div button:nth-child(2){
-    background: #111;
-    color: #fff;
-}
-
-footer .MoreInformation div button:hover{
-    opacity: 0.8;
+    color: #ccc;
 }
 
 /* Developer */
 section.developer{
     text-align: center;
     padding: 1em;
-    background: #dfdfdf;
+    background: rgba(0, 0, 0, 0.7);
     font-size: 0.8em;
-    color: #444
+    color: #fff
 }
 
 /* Animtions */
