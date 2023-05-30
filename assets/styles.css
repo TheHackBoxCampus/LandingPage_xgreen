@@ -8,9 +8,10 @@
 
 :root {
     --font: 'Mukta', sans-serif;
-    --color-primary: #60ffcb;
-    --color-secundary: #111111;
+    --color-primary: #fff;
+    --color-secundary: #122617;
     --color-third: #018985;
+    --color-forty: #ffd28f; 
 }
 
 html {
@@ -28,7 +29,7 @@ body {
 }
 /* Nav */
 nav {
-    background-color: #111111;
+    background-color: var(--color-secundary);
     width: 100%;
     position: relative;
     display: flex;
@@ -56,7 +57,7 @@ nav .sections_menu a{
     color:#fff;
     font-size: 1.3em;
     padding: 0.3em 0.5em;
-    border-bottom: 2px solid #c6fcc7;
+    border-bottom: 2px solid var(--color-forty);
     transition: 300ms ease;
 }
 
@@ -125,13 +126,12 @@ header .product .content_product a{
     transition: 300ms linear; 
     text-align: center;
     cursor: pointer;
-    background: rgb(23,57,29);
-    background-image: radial-gradient(circle at -17.16% 55.88%, #c6fcc7 0, #b8f8c7 12.5%, #a5f1c4 25%, #8ce6bd 37.5%, #6cd8b4 50%, #44caac 62.5%, #00bfa9 75%, #00b7aa 87.5%, #00b3ae 100%);
+    background: var(--color-forty);
 }
 
 header .product .content_product a:nth-child(2){
     background: transparent;
-    border: 1px solid var(--color-third);
+    border: 1px solid var(--color-forty);
     color: #fff
 }
 
@@ -174,7 +174,8 @@ section.action .action_information h3 {
 }
 
 section.action .action_information p {
-    width: 93%;
+    width: 80%;
+    text-align: justify;
 }
 
 section.action .action_information button{
@@ -218,7 +219,7 @@ section.solution_problem  {
 
 section.solution_problem  {
     background: #fff;
-    height: 85vh;
+    height: 90vh;
 }
 
 main .main_information h2,
@@ -707,5 +708,44 @@ section.developer{
 
     100% {
         transform: translateY(0);
+    }
+}
+
+/*Mediaquerys*/
+
+@media (max-width: 1675px) {
+    section.solution_problem {
+        height: 100vh;
+    }
+    section.solution_problem .solution_information h2 {
+        font-size: 2.3em;
+    }
+
+    section.solution_problem .solution_information p {
+        font-size: 1em;
+    }
+
+    section.solution_problem .solution_important .solution_important_cards{
+        flex-direction: row;
+        width: 80%;
+    }
+
+    section.solution_problem .solution_important .card p, 
+    section.solution_problem .solution_important .card ul li {
+        font-size: 0.9em !important;
+    }
+    section.solution_problem .solution_important .card{
+        width: 340px;
+        height: 320px;
+        margin: auto;
+    }
+
+    section.solution_problem .solution_important .card button{
+        
+    }
+
+
+    section.solution_problem .solution_important {
+        flex-direction: column;
     }
 }
