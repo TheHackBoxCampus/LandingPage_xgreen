@@ -736,7 +736,7 @@ section.developer{
     }
     section.solution_problem .solution_important .card{
         width: 340px;
-        height: 330px;
+        height: 350px;
         margin: auto;
     }
 
@@ -831,7 +831,6 @@ section.developer{
         justify-content: center;
         gap: 1em
     }
-
 }
 
 @media (max-width: 987px) {
@@ -896,13 +895,41 @@ section.developer{
     }
     
     section.action {
-        height: 100vw;
+        height: 90vw;
         flex-direction: column;
         margin-top: 2em;
         margin-bottom: 2em;
-    }
-    section.action .action_information {
-        width: 800px;
+        justify-content: center;
+        gap: 3em
     }
 
+    section.action .action_information {
+        max-width: 620px
+
+    }
+    section.action .action_information p{
+        width:  100%
+    }
+
+    section.solution_problem {
+        height: 160vw;
+    } 
+}
+
+@media (max-width: 850px) {
+    main {
+        height: 125vw;
+    }
+    main .main_important {
+        flex-direction: column;
+        gap: 3em
+    }   
+
+    main .main_important .main_important_cards {
+        align-items: center;
+    }
+
+    main .main_important .main_imagen img{
+        width: 75%;
+    }
 }
