@@ -798,4 +798,111 @@ section.developer{
         font-size: 1.9em;
         width: 85%;
     }
+
+    header .product .content_product div {
+        flex-direction: column;
+        margin-top: 2em;
+        gap: 1.5rem
+    }
+    header .product .content_product div a{
+        width: 60%;
+    }
+    section.solution_problem {
+        height: 100vw;
+    }
+
+    section.solution_problem .solution_important {
+        flex-direction: column-reverse !important;
+    }
+
+    section.solution_problem .solution_image_card {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 1060px) {
+    section.section_orders {
+        height: 108vw;
+    }
+    
+    section.section_orders .section_orders_cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em
+    }
+
+}
+
+@media (max-width: 987px) {
+    section.solution_problem {
+        height: 150vw;
+    }
+
+    section.solution_problem .solution_important .solution_important_cards {
+        flex-direction: column;
+    }
+    
+    nav {
+        justify-content: space-between;
+    }
+
+    nav img {
+        margin-left: 5.2em;
+    }
+
+    nav .menu {
+        margin-right: 6em;
+    }
+
+    nav .sections_menu {
+        display: none;
+    }
+}
+
+@media (max-width: 885px) {
+    header .product_photo {
+        display: none;
+    }
+
+    header{ 
+        grid-template-columns: 1fr;
+    }
+
+    header .product{
+        align-items: center;
+    }
+
+    header .product .content_product {
+        height: 60%;
+        justify-content: space-between;
+    }
+
+    header .product .content_product h3 {
+        font-size: 3.6em;
+        width: 95%;
+    }
+    
+    header .product .content_product span{
+        font-size: 1.3em;
+    }
+
+    header .product .content_product div{
+        font-size: 1.3em;
+    }
+    
+    header .product .content_product div a {
+        width: 95%;
+    }
+    
+    section.action {
+        height: 100vw;
+        flex-direction: column;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    section.action .action_information {
+        width: 800px;
+    }
+
 }
