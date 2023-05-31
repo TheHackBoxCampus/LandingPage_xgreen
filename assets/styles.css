@@ -153,10 +153,10 @@ header .product_photo img{
 /* Section action */
 section.action {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: center; 
     height: 450px;
-    width: 60%;
+    width: 80%;
     margin: auto;
     gap: 2rem;
 }
@@ -170,7 +170,7 @@ section.action .action_information{
 
 section.action .action_information h3 {
     font-size: 2.3em;
-    width: 90%;
+    width: 70%;
 }
 
 section.action .action_information p {
@@ -211,7 +211,7 @@ section.solution_problem  {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 100vh;
     width: 100%;
     background: #dfdfdf;
 }
@@ -219,7 +219,6 @@ section.solution_problem  {
 
 section.solution_problem  {
     background: #fff;
-    height: 90vh;
 }
 
 main .main_information h2,
@@ -279,10 +278,11 @@ main  .main_important .main_imagen img {
 
 section .solution_important .solution_image_card {
     width: 50%;
+    margin-left: 5em;
 }
 
 section .solution_important .solution_image_card img{
-    width: 120%;
+    width: 80%;
 }
 
 main .main_important_cards,
@@ -431,7 +431,7 @@ section.section_orders {
     flex-direction: column;
     justify-content: center;
     gap: 5em;
-    height: 80vh;
+    height: 100vh;
     align-items: center;
     background: #afafafaf;
 }
@@ -494,10 +494,8 @@ section.section_orders .section_orders_cards .card button{
 }
 
 section.section_orders .section_orders_cards .card button.btn-started{
-    background: rgb(23,57,29);
-    background-image: radial-gradient(circle at -17.16% 55.88%, #c6fcc7 0, #b8f8c7 12.5%, #a5f1c4 25%, #8fcdd3f2 37.5%, #6cd8b4 50%, #44caac 62.5%, #00bfa9 75%, #00b7aa 87.5%, #00b3ae 100%);
+    background: var(--color-forty);
     color: #000;
-    border: 1px solid var(--color-third);
 }
 
 section.section_orders .section_orders_cards .card button:hover{
@@ -714,15 +712,17 @@ section.developer{
 /*Mediaquerys*/
 
 @media (max-width: 1675px) {
-    section.solution_problem {
-        height: 100vh;
-    }
     section.solution_problem .solution_information h2 {
         font-size: 2.3em;
     }
 
     section.solution_problem .solution_information p {
-        font-size: 1em;
+        font-size: 1.2em;
+    }
+
+    section.solution_problem .solution_important {
+        gap: 3em; 
+        flex-direction: row-reverse !important;
     }
 
     section.solution_problem .solution_important .solution_important_cards{
@@ -732,20 +732,70 @@ section.developer{
 
     section.solution_problem .solution_important .card p, 
     section.solution_problem .solution_important .card ul li {
-        font-size: 0.9em !important;
+        font-size: 0.97em !important;
     }
     section.solution_problem .solution_important .card{
         width: 340px;
-        height: 320px;
+        height: 330px;
         margin: auto;
     }
 
-    section.solution_problem .solution_important .card button{
-        
-    }
-
-
     section.solution_problem .solution_important {
         flex-direction: column;
+    }
+
+    section.solution_problem .solution_image_card {
+        margin-left: 0;
+    }
+
+    section.solution_problem .solution_image_card img {
+        min-width: 100%
+    }
+}
+
+@media (max-width: 1500px) {
+    header .product .content_product h3{
+        font-size: 2.4em;
+    }
+
+    main .main_important .main_important_cards .card {
+        width: 80%;
+    }
+
+    section.solution_problem .solution_information{
+        width: 80%;
+    }
+
+    section.solution_problem .solution_important {
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    section.section_orders .section_orders_cards .card {
+        width: 300px;
+        height: 350px;
+    }
+
+    section.section_orders .section_orders_cards .card button{
+        width: 90%;
+        font-size: .8em;
+    }
+
+    section.section_orders .section_orders_cards .card h3{
+        font-size: 1.5em;
+    }
+    section.section_orders .section_orders_cards .card p{
+        font-size: 0.7em;
+    }
+
+    section.team {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    section.action .action_information h3{
+        font-size: 1.9em;
+        width: 85%;
     }
 }
