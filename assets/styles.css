@@ -264,14 +264,14 @@ section.solution_problem .solution_important {
 }
 
 main .main_important .main_imagen {
-    width: 60%;
+    width: 50%;
     height: 100%;
     overflow: hidden;
+    text-align: center;
 }
 
 main  .main_important .main_imagen img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
     object-fit: cover;
 }
 
@@ -282,7 +282,7 @@ section .solution_important .solution_image_card {
 }
 
 section .solution_important .solution_image_card img{
-    width: 80%;
+    width: 50%;
 }
 
 main .main_important_cards,
@@ -295,6 +295,10 @@ section .solution_important_cards{
     display: flex;
     flex-direction: column;
     gap: 3em;
+}
+
+main .main_important_cards .card {
+    width: 70%;
 }
 
 main .main_important_cards .card,
@@ -834,6 +838,28 @@ section.developer{
 }
 
 @media (max-width: 987px) {
+
+    footer {
+        height: 40vw;
+    }
+    footer div.cap{
+        flex-direction: column;
+    }
+    footer .cap .footer_information_logo{
+        border: none;
+        padding-bottom: 2em;
+        border-bottom: 1px solid #fff;
+        gap: 2em;
+    }
+
+    footer .cap .footer_information_logo .logo img {
+        width: 50%;
+    }
+
+    footer .cap .footer_information_logo .social img {
+        width: 9%;
+    }
+
     section.solution_problem {
         height: 150vw;
     }
@@ -856,6 +882,16 @@ section.developer{
 
     nav .sections_menu {
         display: none;
+    }
+
+    main .main_important .main_imagen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main  .main_important .main_imagen img {
+        width: 70%;
     }
 }
 
@@ -914,11 +950,21 @@ section.developer{
     section.solution_problem {
         height: 160vw;
     } 
+
+    section.action_2 .banner2_information {
+        flex-direction: column;
+    }
+
+    section.action_2 .banner2_information h3{
+        width: 70%;
+        font-size: 1.7em;
+        text-align: justify;
+    }
 }
 
 @media (max-width: 850px) {
     main {
-        height: 125vw;
+        height: 145vw;
     }
     main .main_important {
         flex-direction: column;
@@ -931,5 +977,237 @@ section.developer{
 
     main .main_important .main_imagen img{
         width: 75%;
+    }
+
+    section.section_orders {
+        height: 170vw;
+    }
+
+    section.section_orders .section_orders_cards {
+        flex-direction: column;
+        gap: 2em
+    }
+    section.solution_problem {
+        height: 180vw;
+    }
+
+    section.solution_banner {
+        flex-direction: column;
+        height: 100vw;
+    }
+
+    section.solution_banner .cifres_banner {
+        border-right: none;
+        border-bottom: 1px solid #Fff;
+    }
+
+    section.team {
+        height: 340vw;
+    }
+
+    section.team .integrants {
+        flex-direction: column;
+    }
+
+    section.team .integrants .integrant div p{
+        font-size: 2em;
+    }
+
+    section.team .integrants .integrant div span,
+    section.team .integrants .integrant div h4{
+        font-size: 1.5em;
+    }
+
+    section.team .integrants .integrant img {
+        width: 50%;
+    }
+
+    section.team .team_information h3{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 795px) {
+    section.solution_banner .cifres_banner img {
+        width: 40px;
+        height: 40px;
+    } 
+
+    section.solution_banner .cifres_banner p {
+        font-size: 0.9em;
+    }
+
+    section.solution_banner .cifres_banner {
+        padding-bottom: 1em;
+    }
+
+    section.solution_banner .porcentage img {
+        width: 43%;
+    }
+    
+    section.solution_banner .porcentage p {
+        font-size: 0.9em;
+    }
+
+    section.solution_banner {
+        height: 110vw;
+    }
+}
+
+@media (max-width:763px) {
+    section.section_orders {
+        height: 200vw;
+    }
+}
+
+@media (max-width: 730px) {
+    section.solution_banner .cifres_banner,
+    section.solution_banner .porcentage {
+        width: 70%;
+        gap: 0.8em
+    }
+
+    section.solution_banner .porcentage img {
+        width: 30%;
+    }
+
+    main {
+        height: 170vw;
+    }
+
+    section.action .action_information p {
+        width: 100%;
+    }
+    
+    section.action .action_information h3{
+        width: 100%;
+        font-size: 1.9em;
+        text-align: center;
+    }
+
+    section.action .action_image {
+        width: 100%;
+    }
+       
+    header .product .content_product {
+        justify-content: flex-end;
+        margin-bottom: 3em;
+    }
+
+    header .product .content_product h3{
+        font-size: 2.4em;
+    }
+
+    header .product .content_product span{
+        width: 100%;
+    }
+
+    section.solution_problem {
+        height: 200vw;
+    }
+}
+
+@media (max-width:663px) {
+    section.solution_problem {
+        height: 230vw;
+    }
+
+    section.section_orders {
+        height: 270vw;
+    }
+
+    section.team {
+        height: 360vw;
+    }
+
+    section.action {
+        height: 120vw;
+    }
+
+    section.solution_banner {
+        height: 130vw;
+    }
+
+    section.section_orders .section_orders_cards .card p{
+        font-size: 1em;
+    }
+
+    section.section_orders .section_orders_cards .card {
+        width: 340px;
+        height: 100vw;
+    }
+
+    section.section_orders .section_orders_cards .card:nth-child(2) div p.access {
+        width: 85%;
+        text-align: left;
+    }
+
+    section.solution_problem .solution_important .solution_important_cards .card button,
+    main .main_important .main_important_cards .card button{
+        width: 100%;    
+    }
+}
+
+@media (max-width: 610px) { 
+    main {
+        height: 190vw;
+    }
+
+    section.section_orders {
+        height: 300vw;
+    }
+
+    section.solution_problem {
+        height: 270vw;
+    }
+
+    nav img {
+        margin-left: 3em;
+    }
+
+    nav .menu {
+        margin-right: 4em;
+    }
+
+    footer {
+        height: 60vw;
+    }
+
+    footer .cap .footer_information_logo .logo img{
+        width: 80%;
+    }
+
+    footer .cap .footer_information_logo .social img{
+        width: 14%;
+    }
+}
+
+@media (max-width: 565px) {
+    main {
+        height: 220vw;
+    }
+
+    main .main_important .main_important_cards .card {
+        width: 100%;
+    }
+
+    main .main_important .main_imagen img{
+        width: 100%;
+    }
+
+    footer {
+        height: 80vw;
+    }
+
+    section.solution_banner {
+        height: 160vw;
+    } 
+
+    section.section_orders {
+        height: 330vw;
+    }
+
+    section.action_2 .banner2_information h3 {
+        font-size: 1.5em;
     }
 }
