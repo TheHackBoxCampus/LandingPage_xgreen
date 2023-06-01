@@ -1211,3 +1211,83 @@ section.developer{
         font-size: 1.5em;
     }
 }
+
+
+@media (max-width: 537px) {
+    section.team {
+        height: 400vw;
+    }
+
+    main {
+        height: 250vw;
+    }
+
+    section.action {
+        height: 150vw;
+    }
+
+    section.solution_problem {
+        height: 300vw;
+    }
+
+    section.section_orders {
+        height: 370vw;
+    }
+
+    section.action .action_information h3 {
+        font-size: 2.4em;
+        text-align: justify;
+
+    }
+    main  .main_information h2{
+        font-size: 2.3em;
+        margin-bottom: 1.3em;
+    }
+   
+    section.solution_banner .porcentage p,
+    section.solution_banner .cifres_banner p{
+        font-size: 1em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 473px){
+    section.solution_problem .solution_important {
+        width: 100%;
+    }   
+    
+    section.solution_problem .solution_important .solution_image_card img{
+        width: 100%;
+    }
+
+    section.solution_problem {
+        height: 340vw;
+    }
+    
+    section.solution_banner {
+        height: 190vw;
+    }
+}
+
+@media (max-width:462px) {
+    section.action {
+        height: 180vw;
+    }
+
+    section.action .action_information h3 {
+        font-size:2em;
+        text-align: justify;
+    }
+
+    section.section_orders .section_information h2{
+        font-size: 2em;
+    } 
+
+    header .product .content_product {
+        margin-bottom: 0;
+    }
+
+    header .product .content_product h3 {
+        font-size: 2.1em;
+    }
+}
